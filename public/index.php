@@ -9,7 +9,7 @@ try
 {
     $maxJobs = 2;
     $currentJobs = 0;
-    $queue = new Pheanstalk('94.70.203.212', '11300');
+    $queue = new Pheanstalk($ip, $port);
 
     while($job = $queue->reserve()) {
         echo "Ffmpeg is processing....." . PHP_EOL;
