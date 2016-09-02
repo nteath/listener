@@ -1,0 +1,12 @@
+{
+    "name": "nteath/listener",
+    "require": {
+        "pda/pheanstalk": "3.0.*"
+    },
+    "authors": [
+        {
+            "name": "Thanasis Nterelis",
+            "email": "nteath@gmail.com"
+        }
+    ]
+}
