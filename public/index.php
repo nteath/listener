@@ -30,7 +30,3 @@ catch (ConnectionException $e)
 if ($queue->getConnection()->isServiceListening() == true) {
     echo "Service is listening" . "\n";
 }
-
-
-var_dump($job);
-die();
