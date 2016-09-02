@@ -4,12 +4,11 @@ use Pheanstalk\Exception\ConnectionException;
 use Pheanstalk\Pheanstalk;
 
 require dirname(__DIR__) . "/vendor/autoload.php";
+require dirname(__DIR__) . "/.env";
 
 try
 {
-    $maxJobs = 2;
-    $currentJobs = 0;
-    $queue = new Pheanstalk($ip, $port);
+    $queue = new Pheanstalk($config['ip'], $config['port']);
 
     while($job = $queue->reserve()) {
         echo "Ffmpeg is processing....." . PHP_EOL;
