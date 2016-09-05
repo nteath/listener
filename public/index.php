@@ -9,6 +9,7 @@ require dirname(__DIR__) . "/.env";
 try
 {
     $queue = new Pheanstalk($config['ip'], $config['port']);
+    $queue->watch("outros");
 
     while($job = $queue->reserve()) {
         echo "Ffmpeg is processing....." . PHP_EOL;
