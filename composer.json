@@ -2,10 +2,14 @@
     "name": "nteath/listener",
     "require": {
         "pda/pheanstalk": "3.0.*",
-        "rmccue/requests": ">=1.0"
+        "rmccue/requests": ">=1.0",
+        "vlucas/phpdotenv": "^2.4"
     },
     "autoload": {
-        "classmap": ["public/Response.php"]
+        "psr-4": {
+            "Outromaker\\": "src/"
+        },
+        "files": ["src/helpers.php"]
     },
     "authors": [
         {
